@@ -8,5 +8,224 @@
 
 html {
   font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 13px;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+body {
+  background-color: hsl(214, 17%, 92%);
+  min-height: 100vh;
+  padding: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sections {
+  max-width: 85em;
+  text-align: left;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+
+  grid-template-areas:
+    "section1 section1 section2 section5"
+    "section3 section4 section4 section5";
+  gap: 2.5em 1.5em;
+  text-align: left;
+}
+
+/* Common */
+.section1,
+.section2,
+.section3,
+.section4,
+.section5 {
+  padding: 2em;
+  border-radius: 0.5em;
+  min-height: 21em;
+  min-width: 2em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+.img img {
+  border-radius: 50%;
+  border: 2px solid hsl(264, 82%, 80%);
+  width: 2.5em;
+  height: auto;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.status {
+  margin-top: 0.2em;
+  font-size: 0.9em;
+}
+
+.info {
+  margin-left: 1.2em;
+  align-self: flex-start;
+}
+
+.text {
+  margin-top: 1em;
+  font-weight: 600;
+}
+
+.subtext {
+  margin-top: 1em;
+  line-height: 1.3em;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+/* SECTION 1 */
+.section1 {
+  background-color: hsl(263, 55%, 52%);
+  grid-area: section1;
+
+  background-image: url("/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 3.5em;
+  background-size: 6.3em;
+}
+
+.section1 .info .name {
+  color: hsl(260, 100%, 95%);
+}
+
+.section1 .info .status {
+  color: hsl(264, 82%, 80%);
+}
+
+.section1 .text {
+  color: hsl(260, 100%, 95%);
+}
+
+.section1 .subtext {
+  color: hsl(264, 82%, 80%);
+}
+
+/* SECTION 2 */
+.section2 {
+  background-color: hsl(217, 19%, 35%);
+  grid-area: section2;
+}
+
+.section2 .info .name {
+  color: hsl(214, 17%, 92%);
+}
+
+.section2 .info .status {
+  color: hsl(0, 0%, 81%);
+}
+
+.section2 .text {
+  color: hsl(214, 17%, 92%);
+}
+
+.section2 .subtext {
+  color: hsl(0, 0%, 81%);
+}
+
+/* SECTION 3 & 5*/
+.section3 {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: section3;
+}
+
+.section5 {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: section5;
+}
+
+.section3 .info .name,
+.section5 .info .name {
+  color: hsl(217, 19%, 35%);
+}
+
+.section3 .info .status,
+.section5 .info .status {
+  color: hsl(224, 10%, 45%);
+}
+
+.section3 .text,
+.section5 .text {
+  color: hsl(217, 19%, 35%);
+}
+
+.section3 .subtext,
+.section5 .subtext {
+  color: hsl(224, 10%, 45%);
+}
+
+/* SECTION 4 */
+.section4 {
+  background-color: hsl(219, 29%, 14%);
+  grid-area: section4;
+}
+
+.section4 .info .name {
+  color: hsl(0, 0%, 81%);
+}
+
+.section4 .info .status {
+  color: hsl(0, 0%, 81%);
+}
+
+.section4 .text {
+  color: hsl(0, 0%, 81%);
+}
+
+.section4 .subtext {
+  color: hsl(0, 0%, 81%);
+}
+
+@media screen and (max-width: 920px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sections {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "section1"
+      "section2"
+      "section3"
+      "section4"
+      "section5";
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 10.5px;
+  }
 }
